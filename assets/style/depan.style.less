@@ -1,0 +1,92 @@
+body{
+	margin: 0 auto;
+}
+
+.container{
+	// display: block;
+	background-color: darken(#fff, 20);
+	float: left;
+	width: 100%;
+
+	div{
+		float: left;
+	}
+
+	#grand-total{
+		text-align: right;
+		font-size: 96px;
+		width: 100%;
+		// position: fixed;
+		z-index: 999;
+		background-color: darken(#fff, 20); 
+		// height: 256px;
+			
+	}
+
+	#content{
+		background-color: darken(#fff, 40);
+		// margin-top: 256px; 
+
+		#cashier{
+			display: block;
+			// float: left;
+			background-color: darken(#fff, 40);	
+			padding-left: 12px;
+			// width: 100%;
+		}
+
+		#trx{
+			margin: 0 auto;
+			// float: right;
+			width: 100%;
+			// display: block;
+			div, tr{
+				// background-color: #aaa;		//debug
+				padding:4px;
+				border: none;
+				// float: left;
+			}
+
+			th{
+				text-align: center;
+				padding: 8px 4px;
+				&#id{
+					// width: 64px;
+				}
+
+			}
+
+
+			input.id{
+				width: 128px;
+				text-align: center;
+			}
+
+			div.nama{
+				width: 240px;
+				text-align: left;
+				padding-left: 6px;
+			}
+
+			div.hrg-sat{
+				width: 192px;
+				text-align: center;
+			}
+
+			input.jumlah{
+				width: 64px;
+			}
+
+			div.hrg-tot{
+				width: 192px;
+				text-align: right;
+
+				&:before{
+					content: "Rp.";
+					float: left;
+					padding-left: 6px;
+				}
+			}
+		}
+	}
+}
