@@ -4,25 +4,18 @@
 		$id = $_GET['id'];
 		$query = "SELECT * FROM `barang` WHERE `id_barang` = '".$id."'";
 		$q = $con->query($query);
-		if ($q) {
+		$num = $q->num_rows;
+		if ($num > 0) {
 			while ($r = $q->fetch_object()) {
 				if($_GET['act'] == "nama_barang"){
-					// echo $r -> nama_barang;
-					if(isset($r)){
-						echo $r -> nama_barang;
-					}else{
-						echo "-";
-					}
+					echo $r -> nama_barang;
 				}elseif($_GET['act'] == "harga_barang"){
-					// echo $r -> harga_jual;
-					if($r -> harga_jual != ""){
-						echo $r -> harga_jual;
-					}else{
-						echo "-";
-					}
+					echo $r -> harga_jual;
 				}
 			}
 			$q -> close();
+		}else{
+			echo "-";
 		}
 	}elseif($_GET['act'] == "trx"){
 		
